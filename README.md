@@ -1,1 +1,2 @@
-# JavaScript
+# JavaScript入门
+从freeCodeCamp上自学的JavaScript，并整理总结
