@@ -12,8 +12,18 @@
     <script>
         // // 题目1: 求下面数组元素的和
         // let arr = [7, 10, 3, 2]
+        // let result = arr.reduce((sum, value) => {
+        //     sum += value;
+        //     return sum;
+        // }, 0)
+        // console.log(result);
         // // 题目2: 把下面字符串拼接在一起
         // let brr = ['小明', '小红', '小刘', '小李', '小赵']
+        // let res = brr.reduce((sum, value) => {
+        //     sum += value;
+        //     return sum;
+        // }, "")
+        // console.log(res);
         // // 题目3: 求出每个人的年龄和
         // let crr = [
         //     {
@@ -33,25 +43,37 @@
         //         age: 15
         //     }
         // ]
+        // let res = crr.reduce((sum, value) => {
+        //     sum += value.age;
+        //     return sum;
+        // }, 0)
+        // console.log(res);
         // // 题目4: 求出年龄小于18岁的人的年龄和
-        // let drr = [
-        //     {
-        //         name: "小明",
-        //         age: 19
-        //     },
-        //     {
-        //         name: '小红',
-        //         age: 10
-        //     },
-        //     {
-        //         name: '小青',
-        //         age: 39
-        //     },
-        //     {
-        //         name: '小爱',
-        //         age: 15
-        //     }
-        // ]
+        let drr = [
+            {
+                name: "小明",
+                age: 19
+            },
+            {
+                name: '小红',
+                age: 10
+            },
+            {
+                name: '小青',
+                age: 39
+            },
+            {
+                name: '小爱',
+                age: 15
+            }
+        ]
+        let res = drr.reduce((sum, value) => {
+            if (value.age < 18) {
+                sum += value.age;
+            }
+            return sum; //即使不满足条件，也需要返回sum
+        }, 0)
+        console.log(res);
 
 
 
