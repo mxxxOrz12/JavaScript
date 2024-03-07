@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //方式1-普通声明
+  let student1 = new Object()
+  student1.id = 100
+  student1.name = "jack"
+  student1.sayHi = function (){
+    console.log("我叫"+this.name+",id是"+this.id)
+  }
+  console.log(student1.name);
+  student1.sayHi()
+
+  //方式2-字面量声明
+  let student2 = {
+    id : 200,
+    name : "tony",
+    sayHi : function () {
+      console.log("我叫"+this.name+",id是"+this.id)
+    }
+  }
+  console.log(student2.name);
+  student2.sayHi()
+
+  //方式3-构造函数
+  //在构造方法中定义类的属性与方法
+  function Student(id, name) {
+    this.id = id
+    this.name = name
+    this.sayHi = function () {
+      console.log("我叫"+this.name+",id是"+this.id)
+    }
+  }
+  // Student.prototype.count = 100;
+  // Student.prototype.study = function (){
+  //     console.log("共享学习空间");
+  // }
+  //简单语法
+  Student.prototype={
+      count : 100,
+      study : function (){
+              console.log("共享学习空间");
+      }
+  }
+  let student3 = new Student(300,"tom")
+  let student4 = new Student(400,"lucy")
+  console.log(student3.name);
+  student3.sayHi();
+  console.log(student4.name);
+  student4.sayHi();
+
+  console.log(student3.sayHi == student4.sayHi);
+  console.log(student3.study == student4.study);
+  console.dir(student3);
+  console.log(student3);
+  console.log(student4);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //JS数组-不需要定义类型
+    let array = [11,"jack",null,undefined,new Object(),function (){console.log("haha")},[1,2,3]]
+    for (let item of array) {
+        console.log(typeof item+" "+ item);
+        if(typeof item === "function"){
+            item();
+        }
+    }
+    //JS数组-不需要定义类型
+    //1-单列集合
+    // let arr3 = [11,"jack",null,undefined,new Object(),function (){console.log("haha")},[1,2,3]]
+    // for (let item of arr3) {
+    //     //console.log(typeof item+" "+ item);
+    //     if(typeof item === "function"){
+    //         item();
+    //     }
+    // }
+    // arr3.forEach(item=>{
+    //   console.log(item);
+    // })
+    // arr2.forEach((index,item)=>{
+    //   console.log(index+" "+item)
+    // })
+</script>
+</body>
+</html>
