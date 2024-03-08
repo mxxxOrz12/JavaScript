@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-<script>
-    //异步操作：3秒后将数据+10返回
-    // function f(){
-    //     let num = 10;
-    //     setTimeout(function () {
-    //         num += 10;
-    //     },3000);
-    //     return num;
-    // }
-    // let res = f();
-    // console.log(res);
 
-    //回调函数
-    function f(fn){
+<body>
+    <script>
+        //异步操作：3秒后将数据+10返回
+        // function f(){
+        //     let num = 10;
+        //     setTimeout(function () {
+        //         num += 10;
+        //     },3000);
+        //     return num;
+        // }
+        // let res = f();
+        // console.log(res);
         let num = 10;
-        setTimeout(function () {
-            num += 10;
-            fn(num);
-        },3000);
-    }
-    f(function (num) {
-        console.log(num);
-    })
-</script>
+
+        //回调函数
+        function f(fn) {
+            setTimeout(function () {
+                num += 10;
+                fn(num);
+            }, 3000);
+        }
+
+
+        function show(num) {
+            console.log(num);
+        }
+
+
+        f(show);
+        // console.log(num);
+    </script>
 </body>
+
 </html>

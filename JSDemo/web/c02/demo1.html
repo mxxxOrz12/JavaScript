@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Title</title>
 </head>
+
 <body>
-<script>
-function sum(num1,num2){
-  return num1+num2
-}
-let result1 = sum(1,5)
-console.log(result1)
-let result2 = sum(1,"5")
-console.log(result2)
-//注意：命名函数重名后，后面的函数会把前面的函数覆盖
-//预解析：把函数的声明提升到当前作用域的最前面，只会提升声明，不会提升调用
-function sum(num1,num2){
-  return num1-num2
-}
-let result3 = sum(1,5)
-console.log(result3)
-</script>
+
 </body>
+<script>
+  function sum(num1, num2) {
+    return num1 + num2
+  }
+  let result1 = sum(1, 5)
+  console.log(result1)
+  let result2 = sum(1, "5")
+  console.log(result2)
+  //注意：命名函数重名后，后面的函数会把前面的函数覆盖
+  //预解析：把函数的声明提升到当前作用域的最前面，只会提升声明，不会提升调用
+  function sum(num1, num2) {
+    return num1 - num2
+  }
+  let result3 = sum(1, 5)
+  console.log(result3)
+</script>
+
 </html>

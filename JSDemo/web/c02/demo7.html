@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<script>
-  //3秒后读取数据，当数据>=0时，error=null,数据+=10
-  // 当输入数据小于<0是error={mes:"服务器崩溃"},数据=undefined，
-  function readFile(data,fn){
-    setTimeout(function () {
-      if(data >= 0){
-        data+=10;
-        fn(null,data);
-      }else {
-        fn({mes:"服务器崩溃"},undefined);
-      }
-    },3000)
-  }
-  readFile(10,function (error,data){
-    if(error){
-      console.log(error)
-      console.log("数据读取失败，data=" + data);
-    }else {
-      console.log("数据读取成功，data="+data);
-    }
-  })
 
-</script>
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+
+<body>
+  <script>
+    //3秒后读取数据，当数据>=0时，error=null,数据+=10
+    // 当输入数据小于<0是error={mes:"服务器崩溃"},数据=undefined，
+    function readFile(data, fn) {
+      setTimeout(function () {
+        if (data >= 0) {
+          data += 10;
+          fn(null, data);
+        } else {
+          fn({ mes: "服务器崩溃" }, undefined);
+        }
+      }, 1000)
+    }
+    readFile(10, function (error, data) {
+      if (error) {
+        console.log(error)
+        console.log("数据读取失败，data=" + data);
+      } else {
+        console.log("数据读取成功，data=" + data);
+      }
+    })
+    console.log("读取数据中...");
+
+  </script>
 </body>
+
 </html>
