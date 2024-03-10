@@ -1,49 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
-<script>
-//1-固定长度数组
-let arr1 = new Array(3)
-arr1[0] = 11
-arr1[1] = 22
-arr1[2] = 33
-for (let i = 0; i < arr1.length; i++) {
-  console.log(arr1[i])
-}
-for (let item of arr1) {
-  console.log(item)
-}
-console.log(arr1);
+    <script>
+        //1-固定长度数组
+        let arr1 = new Array(3)
+        arr1[0] = 11
+        arr1[1] = 22
+        arr1[2] = 33
 
-//动态数组-相当于ArrayList
-let arr2 = ['jack','tony','lucy']
-for (let name of arr2) {
-    console.log(name);
-}
-let pushedLength = arr2.push("tom");
-console.log(pushedLength);
-let unshiftedLength = arr2.unshift("rose");
-console.log(unshiftedLength);
-for (let name of arr2) {
-    console.log(name);
-}
-console.log("-------------")
-let popElement = arr2.pop();
-console.log(popElement);
-for (let name of arr2) {
-    console.log(name);
-}
-console.log("-------------")
-let shiftElement = arr2.shift();
-console.log(shiftElement);
-for (let name of arr2) {
-    console.log(name);
-}
+        arr1.forEach(val => {
+            console.log(val)
+        })
 
-</script>
+        for (let item of arr1) {
+            console.log(item)
+        }
+        let length = arr1.push(44)
+        console.log(length)
+        arr1.unshift(0)
+        console.log(arr1)
+        let pop = arr1.pop()
+
+        console.log(pop)
+        console.log(arr1)
+
+        // for (let item of arr1) {
+        //     console.log(item)
+        // }
+        // console.log(arr1);
+
+        // //动态数组-相当于ArrayList
+        // let arr2 = ['jack', 'tony', 'lucy']
+        // for (let name of arr2) {
+        //     console.log(name);
+        // }
+        // let pushedLength = arr2.push("tom");
+        // console.log(pushedLength);
+        // let unshiftedLength = arr2.unshift("rose");
+        // console.log(unshiftedLength);
+        // for (let name of arr2) {
+        //     console.log(name);
+        // }
+        // console.log("-------------")
+        // let popElement = arr2.pop();
+        // console.log(popElement);
+        // for (let name of arr2) {
+        //     console.log(name);
+        // }
+        // console.log("-------------")
+        // let shiftElement = arr2.shift();
+        // console.log(shiftElement);
+        // for (let name of arr2) {
+        //     console.log(name);
+        // }
+
+    </script>
 </body>
+
 </html>

@@ -14,13 +14,23 @@
         // let arr = [7, 10, 3, 2]
         // arr.forEach(val => console.log(val))
         // // 题目2: 遍历数组每个人名, 并拼接一句", 你好"
-        let brr = ['小明', '小红', '小刘', '小李', '小赵']
-        brr.forEach(val => {
-            val += ", 你好"
-        }
-        )
-        console.log(brr)
+        // let brr = ['小明', '小红', '小刘', '小李', '小赵']
+        // brr.forEach(val => {
+        //     val += ", 你好"
+        //     console.log(val)
+        // }
+        // )
+        // console.log(brr)
+        let users = [
+            { name: "Alice", age: 25 },
+            { name: "Bob", age: 30 },
+            { name: "Charlie", age: 35 }
+        ];
+        users.forEach(user => {
+            user.isActive = true; // 给每个用户添加一个新属性
+        });
 
+        console.log(users);
 
         // // 题目3: 遍历数组里每个对象, 然后打印人名
         let crr = [

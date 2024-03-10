@@ -1,29 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<script>
-  function Person(id,name){
-    this.id = id;
-    this.name = name;
-    this.eat = function (){
-      console.log("人吃饭");
-    }
-  }
-  function Teacher(edu){
-    this.edu = edu
-    this.teach = function (){
-      console.log("教师教书");
-    }
-  }
-  Teacher.prototype = new Person(1,"王强");
-  let teacher = new Teacher("博士");
-  teacher.eat();
-  teacher.teach();
 
-</script>
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+
+<body>
+  <script>
+    // function Person(id, name) {
+    //   this.id = id
+    //   this.name = name
+    //   this.sayHi = function () {
+    //     console.log("我叫" + this.name + ",id是" + this.id)
+    //   }
+    // }
+    // function Teacher(edu) {
+    //   this.edu = edu
+    //   this.sayHi = function () {
+    //     console.log("我是" + this.edu + "老师")
+    //   }
+    // }
+    // Teacher.prototype = new Person(100, "jack");
+    // let teacher = new Teacher("THU");
+
+    // teacher.sayHi();
+    // console.log(teacher.__proto__);
+    // teacher.__proto__.sayHi();
+    // console.log(teacher.name)
+    // console.log(teacher)
+
+    let man = {
+      name: "jack",
+      age: 20
+    }
+    for (let [key, value] of Object.entries(man)) {
+      console.log(key + ":" + value);
+    }
+
+
+
+
+  </script>
 </body>
+
 </html>
