@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="创建一个p标签" id="btnAdd"/>
+<input type="button" value="删除一个p标签" id="btnRemove"/>
+<div id="dv"></div>
+<script>
+    //1-document.write():页面上存在的所有的内容全部被干掉
+    // document.getElementById("btnAdd").onclick = function () {
+    //     document.write("<p>这是一个p标签</p>");
+    // };
+    //2-对象.innerHTML="标签代码及内容";
+    // document.getElementById("btnAdd").onclick = function () {
+    //     document.getElementById("dv").innerHTML = "<p>这是一个p标签</p>"
+    // };
+    //3-创建节点方式createElement、appendChild
+    let tagP = document.createElement("p");
+    tagP.innerText = "这是一个p标签";
+    document.querySelector("#btnAdd").onclick = function () {
+      document.querySelector("#dv").appendChild(tagP);
+    }
+
+
+</script>
+</body>
+</html>
