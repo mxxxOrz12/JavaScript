@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Title</title>
 </head>
+
 <body>
-<script>
-  //字符串转换成JSON对象
-  let str = '{"id":"1","name":"jack"}';
-  let jsonData = JSON.parse(str);
-  for (let key in jsonData) {
-    console.log(key+" "+jsonData[key])
-  }
-  let strType = JSON.stringify(jsonData);
-  console.log(strType);
-</script>
+  <script>
+    let str = '{ "name": "John", "age": 30, "city": "New York"}';
+    let jsonData = JSON.parse(str);
+    console.log(jsonData);
+    for (let key in jsonData) {
+      console.log(key + ": " + jsonData[key])
+    }
+    let strType = JSON.stringify(jsonData)
+    console.log(strType)
+    console.log(typeof jsonData)
+    console.log(typeof strType)
+
+
+  </script>
 </body>
+
 </html>
