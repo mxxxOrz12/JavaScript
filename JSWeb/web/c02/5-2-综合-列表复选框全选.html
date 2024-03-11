@@ -81,6 +81,7 @@
         </table>
     </div>
     <script>
+        //复选框
         let cbAll = document.querySelector("#cbAll");
         let cbItems = document.querySelectorAll("#t_body input")
         cbAll.onclick = function () {
@@ -95,6 +96,8 @@
                     //检查每个子标签是否选中，如果有一个未选中，则主标签为false，退出循环
                     if (!cbItem.checked) {
                         flag = false;
+
+
                         break;
                     }
                 }
