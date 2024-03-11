@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -48,38 +49,61 @@
         }
     </style>
 </head>
-<body>
-<div class="wrap">
-    <table>
-        <thead>
-        <tr>
-            <th>
-                <input type="checkbox" id="cbAll"/>
-            </th>
-            <th>菜名</th>
-            <th>饭店</th>
-        </tr>
-        </thead>
-        <tbody id="t_body">
-        <tr>
-            <td>
-                <input type="checkbox"/>
-            </td>
-            <td>红烧肉</td>
-            <td>北京大饭店</td>
-        </tr>
-        <tr>
-            <td>
-                <input type="checkbox"/>
-            </td>
-            <td>西红柿鸡蛋</td>
-            <td>浙江杭帮菜</td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-<script>
 
-</script>
+<body>
+    <div class="wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" id="cbAll" />
+                    </th>
+                    <th>菜名</th>
+                    <th>饭店</th>
+                </tr>
+            </thead>
+            <tbody id="t_body">
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>红烧肉</td>
+                    <td>北京大饭店</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>西红柿鸡蛋</td>
+                    <td>浙江杭帮菜</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        let cbAll = document.querySelector("#cbAll");
+        let cbItems = document.querySelectorAll("#t_body input")
+        cbAll.onclick = function () {
+            for (let cbItem of cbItems) {
+                cbItem.checked = this.checked;
+            }
+        }
+        for (let cbItem of cbItems) {
+            cbItem.onclick = function () {
+                let flag = true;
+                for (let cbItem of cbItems) {
+                    //检查每个子标签是否选中，如果有一个未选中，则主标签为false，退出循环
+                    if (!cbItem.checked) {
+                        flag = false;
+                        break;
+                    }
+                }
+                cbAll.checked = flag;
+            }
+        }
+
+
+    </script>
 </body>
+
 </html>

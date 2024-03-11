@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<input type="button" value="绑定事件" id="btnAddEvent">
-<input type="button" value="解绑第一个事件" id="btnRemoveEvent">
-<script>
-  function f1(){
-    console.log("第一个事件");
-  }
-  function f2(){
-    console.log("第二个事件");
-  }
-  let btnAddEvent = document.querySelector("#btnAddEvent");
 
-</script>
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+
+<body>
+  <input type="button" value="绑定事件" id="btnAddEvent">
+  <input type="button" value="解绑第一个事件" id="btnRemoveEvent">
+  <script>
+    function f1() {
+      console.log("第一个事件");
+    }
+    function f2() {
+      console.log("第二个事件");
+    }
+    let btnAddEvent = document.querySelector("#btnAddEvent");
+    btnAddEvent.addEventListener("click", function (e) {
+      console.log(e.type)
+    })
+    btnAddEvent.addEventListener("click", f1)
+
+  </script>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -23,22 +24,31 @@
         }
     </style>
 </head>
+
 <body>
-<div id="dv1">
-    <div id="dv2">
-        <div id="dv3"></div>
+    <div id="dv1">
+        <div id="dv2">
+            <div id="dv3">
+                <p>你好</p>
+            </div>
+        </div>
     </div>
-</div>
-<script>
-    document.querySelector("#dv1").onclick=function () {
-        console.log(this.id);
-    };
-    document.querySelector("#dv2").onclick=function () {
-        console.log(this.id);
-    };
-    document.querySelector("#dv3").onclick=function () {
-        console.log(this.id);
-    };
-</script>
+    <script>
+        document.querySelector("#dv1").onclick = function () {
+            console.log(this.id);
+        };
+        document.querySelector("#dv2").onclick = function (e) {
+            e.stopPropagation();
+            console.log(this.id);
+        };
+        let div3 = document.querySelector("#dv3");
+        document.querySelector("#dv3").onclick = function (e) {
+            e.stopPropagation();
+            console.log(this.id);
+        };
+        console.log(div3.innerHTML)
+        console.log(div3.innerText)
+    </script>
 </body>
+
 </html>
