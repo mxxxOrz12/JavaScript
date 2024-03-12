@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-<input type="button" value="创建功夫列表" id="btn"/>
-<div id="dv"></div>
-<script>
-    let kongfuList = ["九阳神功", "乾坤大挪移", "如来神掌"];
 
-</script>
+<body>
+    <input type="button" value="创建功夫列表" id="btn" />
+    <div id="dv"></div>
+    <script>
+        let kongfuList = ["九阳神功", "乾坤大挪移", "如来神掌"];
+        document.querySelector("#btn").onclick = function () {
+            console.log("1")
+            let tagUl = document.createElement("ul")
+            for (let child of kongfuList) {
+                let tagLi = document.createElement("li")
+                tagLi.innerHTML = child
+                tagUl.appendChild(tagLi);
+                tagLi.onmouseover = function () {
+                    this.style.background = "yellow";
+                }
+                tagLi.onmouseout = function () {
+                    this.style.background = ""
+                }
+            }
+            tagUl.style.background = "red"
+            document.querySelector("#dv").appendChild(tagUl)
+
+        }
+
+    </script>
 </body>
+
 </html>

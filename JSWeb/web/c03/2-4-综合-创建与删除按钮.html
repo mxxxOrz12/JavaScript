@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
-<input type="button" value="创建按钮" id="btnCreate"/>
-<input type="button" value="删除第一个子元素" id="btnDelete"/>
-<input type="button" value="删除所有子元素" id="btnDeleteAll"/>
-<div id="divButton"></div>
-<script>
-let i = 0;
-let btnCreate = document.querySelector("#btnCreate");
-let btnDelete = document.querySelector("#btnDelete");
-let btnDeleteAll = document.querySelector("#btnDeleteAll");
-let divButton = document.querySelector("#divButton");
+    <input type="button" value="创建按钮" id="btnCreate" />
+    <input type="button" value="删除第一个子元素" id="btnDelete" />
+    <input type="button" value="删除所有子元素" id="btnDeleteAll" />
+    <div id="divButton"></div>
+    <script>
+        let i = 0;
+        let btnCreate = document.querySelector("#btnCreate");
+        let btnDelete = document.querySelector("#btnDelete");
+        let btnDeleteAll = document.querySelector("#btnDeleteAll");
+        let divButton = document.querySelector("#divButton");
 
-btnCreate.onclick = function () {
+        btnCreate.onclick = function () {
+            i++;
+            let button = document.createElement("button")
+            button.innerHTML = "按钮" + i;
+            button.style.display = "block"
+            button.style.margin = "10px 0"
+            button.style.background = "yellow"
+            divButton.insertBefore(button, divButton.firstElementChild)
 
-}
 
-btnDelete.onclick = function () {
+        }
 
-}
+        btnDelete.onclick = function () {
+            divButton.removeChild(divButton.firstElementChild)
 
-btnDeleteAll.onclick = function () {
+        }
 
-}
-</script>
+        btnDeleteAll.onclick = function () {
+            while (divButton.firstElementChild) {
+                divButton.removeChild(divButton.firstElementChild)
+            }
+            i = 0;
+
+        }
+    </script>
 </body>
+
 </html>

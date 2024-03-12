@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
-<div id="dv">哦哦
-    <span>这是div中的第一个span标签</span>
-    <p>这是div中的第二个元素,第一个p标签</p>
-    <ul id="ulNames">
-        <li>乔峰</li>
-        <li>虚竹</li>
-        <li id="three">段誉</li>
-        <li>金轮法王</li>
-    </ul>
-</div>
-<script>
-    let ulNames = document.querySelector("#ulNames");
-    let liThree = document.querySelector("#three");
-    // 1-首尾与兄弟元素
+    <div id="dv">哦哦
+        <span>这是div中的第一个span标签</span>
+        <p>这是div中的第二个元素,第一个p标签</p>
+        <ul id="ulNames">
+            <li>乔峰</li>
+            <li>虚竹</li>
+            <li id="three">段誉</li>
+            <li>金轮法王</li>
+        </ul>
+    </div>
+    <script>
+        let ulNames = document.querySelector("#ulNames");
+        let liThree = document.querySelector("#three");
+        // 1-首尾与兄弟元素
+        let firstChild = ulNames.firstElementChild;
+        console.log(firstChild)
+        firstChild.style.fontSize = "22px"
+        let lastChild = ulNames.lastElementChild;
+        lastChild.style.background = "red"
 
-    console.log("------------------------");
-    // 2-首尾与兄弟节点
+        console.log("------------------------");
+        // 2-首尾与兄弟节点
 
-</script>
+    </script>
 </body>
+
 </html>
