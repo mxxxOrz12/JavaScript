@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
-<input type="button" value="停止时间" id="btn"/>
-<div id="time"></div>
-<script>
+    <input type="button" value="停止时间" id="btn" />
+    <div id="time"></div>
+    <script>
+        let showDate = setInterval(function () {
+            let date = new Date();
+
+            document.querySelector("#time").innerHTML = date.toLocaleString()
+
+        }, 1000);
+        document.querySelector("#btn").onclick = function () {
+            clearInterval(showDate)
+            document.querySelector("#time").innerHTML = ""
+        }
 
 
 
-</script>
+
+    </script>
 </body>
+
 </html>

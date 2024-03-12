@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
-<script>
-    //场景1
+    <script>
+        //场景1
+        let testObject = {
+            name: "jack",
+            age: "20",
+            sayHi: function () {
+                console.log("Hi");
+            }
+        }
+        for (let ele in testObject) {
+            console.log(ele + ": " + testObject[ele])
+        }
 
-    //场景2
+        //场景2
 
-    //场景3-内置函数
+        //场景3-内置函数
 
-</script>
+    </script>
 </body>
+
 </html>
