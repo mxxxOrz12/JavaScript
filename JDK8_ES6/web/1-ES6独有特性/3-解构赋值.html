@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-<script>
 
-</script>
+<body>
+    <script>
+        // let student = {
+        //     name: "maxiao",
+        //     eat: function () {
+        //         console.log("shabi")
+        //     }
+        // }
+        // let { eat } = student
+        // eat()
+
+        //应用场景
+        // function connect(option) {
+        //     let host = option.host;
+        //     let port = option.port;
+        //     console.log(host + ":" + port);
+        // }
+
+        function connect({ host, port }) {
+            console.log(host + ":" + port)
+        }
+        connect({
+            host: "127.0.0.1",
+            port: "3306"
+        })
+
+
+    </script>
 </body>
+
 </html>

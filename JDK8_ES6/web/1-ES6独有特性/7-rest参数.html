@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
-<script>
+    <p>点击按钮筛选出数组中大于输入框的值</p>
+    <input type="text" id="textValue">
+    <button id="b1">点我</button>
+    <p id="age">年龄数组：</p>
+    <script>
+        var ages = [20, 10, 22, 30]
+        document.querySelector("#age").innerHTML += ages
+
+        document.querySelector("#b1").onclicl = function () {
+            return ages.filter(checkAge)
+        }
+        function checkAge() {
+
+        }
 
 
-</script>
+
+
+
+    </script>
 </body>
+
 </html>

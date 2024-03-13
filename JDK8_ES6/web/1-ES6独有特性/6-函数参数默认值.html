@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
-<script>
+    <script>
+        // function add(a, b, c = 2) {
+        //     return a + b + c;
+        // }
+        // let result = add(1, 2)
+        // console.log(result)
 
+        function connect({ host = "127.0.0.1", port }) {
+            console.log(host + ":" + port)
+        }
+        connect({
+            port: 3306222
+        })
 
-</script>
+    </script>
 </body>
+
 </html>
