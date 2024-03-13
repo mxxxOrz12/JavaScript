@@ -7,20 +7,29 @@
 </head>
 
 <body>
-    <p>点击按钮筛选出数组中大于输入框的值</p>
+    <!-- <p>点击按钮筛选出数组中大于输入框的值</p>
     <input type="text" id="textValue">
     <button id="b1">点我</button>
-    <p id="age">年龄数组：</p>
+    <p id="age">年龄数组：</p> -->
     <script>
-        var ages = [20, 10, 22, 30]
-        document.querySelector("#age").innerHTML += ages
+        // var ages = [20, 10, 22, 30]
+        // document.querySelector("#age").innerHTML += ages
 
-        document.querySelector("#b1").onclicl = function () {
-            return ages.filter(checkAge)
-        }
-        function checkAge() {
+        // document.querySelector("#b1").onclick = function () {
+        //     document.querySelector("#age").innerHTML = ages.filter(checkAge)
+        // }
+        // function checkAge(age) {
+        //     return age >= document.querySelector("#textValue").value
 
+        // }
+        let a = [1, 2, 3, 4]
+        console.log(typeof a)
+        function fun3(a, b, ...args) {
+            console.log(a);
+            console.log(b);
+            console.log(typeof args)
         }
+        fun3(1, 2, 3, 4, 5, 6, 7)
 
 
 
