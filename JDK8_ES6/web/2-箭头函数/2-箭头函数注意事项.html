@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -11,10 +12,33 @@
         }
     </style>
 </head>
-<body>
-<div id="ad"></div>
-<script>
 
-</script>
+<body>
+    <div id="ad"></div>
+    <script>
+        // const myObject = {
+        //     name: "hello",
+        //     myMethod: function () {
+        //         return this.name;
+        //     }
+        // };
+
+        // console.log(myObject.myMethod()); // this 指向 myObject
+
+        //显示调用
+        const a = {
+            ni: "1"
+        }
+
+        function getName() {
+            console.log(this)
+        }
+
+        getName();
+        getName.call({ a })
+
+
+    </script>
 </body>
+
 </html>

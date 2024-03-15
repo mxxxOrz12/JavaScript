@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let name = "小王", age = 17;
+    let obj = {
+        name: "小张",
+        objAge: this.age,
+        myFunction() {
+            console.log(this.name + "年龄：" + this.age)
+        }
+    }
+    console.log(obj.objAge)
+    console.log(obj.myFunction())
+
+</script>
+
+</html>
