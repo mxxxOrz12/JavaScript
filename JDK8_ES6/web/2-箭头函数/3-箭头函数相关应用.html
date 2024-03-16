@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-<script>
 
-</script>
+<body>
+    <script>
+        let persons = [
+            {
+                name: "ma1111",
+                age: 10
+            },
+            {
+                name: "ma111",
+                age: 10
+            },
+            {
+                name: "ma11",
+                age: 15
+            },
+            {
+                name: "ma1",
+                age: 20
+            }
+        ]
+        // persons.forEach(person => console.log(person.name + ":" + person.age))
+        // for (let per of persons) {
+        //     console.log(per.name)
+        // }
+
+
+        // let flag1 = persons.every(person => person.age < 5)
+        // let flag2 = persons.some(person => person.name === "ma1")
+        // console.log(flag1)
+        // console.log(flag2)
+
+        // persons.forEach((person, index) => console.log(index + " " + person.name))
+        // let list1 = persons.filter(item => item.age > 15)
+        // console.log(list1)
+
+        // let list2 = persons.filter(item => item.age > 15).map(person => person.name + "是傻逼")
+        // console.log(list2)
+        const arr = [10, 2, 5, 6]
+        console.log(arr.includes(2))
+
+        console.log(arr.findIndex(val => val == 2))
+
+
+
+
+
+
+    </script>
 </body>
+
 </html>

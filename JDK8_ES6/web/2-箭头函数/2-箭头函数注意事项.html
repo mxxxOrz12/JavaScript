@@ -26,16 +26,36 @@
         // console.log(myObject.myMethod()); // this 指向 myObject
 
         //显示调用
-        const a = {
-            ni: "1"
-        }
+        // const a = {
+        //     ni: "1"
+        // }
 
-        function getName() {
-            console.log(this)
-        }
+        // function getName() {
+        //     console.log(this)
+        // }
 
-        getName();
-        getName.call({ a })
+        // getName.call({})
+        // document.querySelector("#ad").onclick = function () {
+        //     setTimeout(() => {
+        //         console.log(this)
+        //         this.style.background = "blue"
+
+        //     }, 1000);
+        // }
+
+        function fun() {
+            return () => {
+                console.log(this)
+            }
+        }
+        let obj = {
+            name: "ma"
+        }
+        fun()()
+        fun.bind(obj)()()
+
+
+
 
 
     </script>

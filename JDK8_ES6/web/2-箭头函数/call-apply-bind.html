@@ -11,16 +11,40 @@
 
 </body>
 <script>
-    let name = "小王", age = 17;
+    // let name = "小王";
+    // let age = 17;
+    // let obj = {
+    //     name: "小张",
+    //     objAge: this.age,
+    //     myFunction() {
+    //         console.log(this.name + "年龄：" + this.age)
+    //     }
+    // }
+    // console.log(obj.objAge)
+    // console.log(obj.myFunction())
+    // let fav = "盲僧"
+    // function shows() {
+    //     console.log(this.fav)
+    // }
+    // shows()
+    let name = '小王', age = 17;
     let obj = {
-        name: "小张",
+        name: '小张',
         objAge: this.age,
-        myFunction() {
-            console.log(this.name + "年龄：" + this.age)
+        myFun: function (fm, t) {
+            console.log(this.name + " 年龄：" + this.age, "来自" + fm + "去往" + t)
         }
     }
-    console.log(obj.objAge)
-    console.log(obj.myFunction())
+    let db = {
+        name: "ma",
+        age: 20
+    }
+    // obj.myFun.call(db, '成都', '上海')
+    obj.myFun.apply(db, ['成都', '上海'])
+
+
+
+
 
 </script>
 
