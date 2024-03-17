@@ -1,12 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-<script>
 
-</script>
+<body>
+    <script>
+        class Person {
+            static count = 0;
+
+
+            constructor(id, name) {
+                this.id = id;
+                this.name = name;
+            }
+
+
+            eat() {
+                console.log(this.name + "在吃饭")
+            }
+        }
+
+        class Teacher extends Person {
+            constructor(id, name, edu) {
+                super(id, name)
+                this.edu = edu
+            }
+
+
+            eat() {
+                console.log("教师在吃饭")
+            }
+
+            teach() {
+                super.eat()
+                console.log("教师教书")
+            }
+        }
+
+        let teacher = new Teacher(1, "王强", "博士")
+        teacher.eat()
+        teacher.teach()
+        console.log(teacher)
+
+
+        class Ma extends Teacher {
+            constructor(id, name, edu, pg) {
+                super(id, name, edu, pg)
+                this.pg = pg;
+            }
+
+            learn() {
+                super.teach()
+                console.log(this.pg)
+            }
+        }
+
+        let ma = new Ma(2, "ma", "本科", "gis")
+        console.log(ma)
+        ma.learn()
+
+
+
+
+
+
+
+
+    </script>
 </body>
+
 </html>

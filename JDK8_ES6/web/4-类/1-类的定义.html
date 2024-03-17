@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-<script>
 
-</script>
+<body>
+    <script>
+        // function person(id, name) {
+        //     this.id = id;
+        //     this.name = name;
+        // } 1
+        // person.prototype.eat = function () {
+        //     console.log(this.name + "吃饭")
+        //     console.log(this)
+        // }
+
+        // //使用new关键字调用函数时，new指向新创建的对象 person
+        // let p1 = new person(1, "ma")
+        // // console.log(p1)
+        // // p1.eat()
+
+        class Person {
+
+            get menu() {
+                return this.dishList;
+            }
+
+            set menu(dish) {
+                this.dishList.push(dish)
+            }
+
+            static count = 0;
+            constructor(id, name) {
+                this.id = id;
+                this.name = name;
+                this.dishList = []
+            }
+
+
+            eat() {
+                console.log(this.name + " 吃饭")
+            }
+        }
+        // let p1 = new Person(1, "wang")
+        // console.log(p1)
+        // p1.eat()
+        // p1.name = "ma"
+        // p1.eat()
+        // p1.menu = "牛肉"
+        // console.log(p1.menu)
+
+
+
+
+    </script>
 </body>
+
 </html>

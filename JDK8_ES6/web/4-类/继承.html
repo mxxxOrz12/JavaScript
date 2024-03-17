@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+</body>
+<script>
+    function Parent() {
+        this.parentProperty = 50000;
+    }
+
+    Parent.prototype.getParentProperty = function () {
+        return this.parentProperty;
+    };
+
+    function Child() {
+        this.childProperty = 1000;
+    }
+
+    // 继承Parent
+    Child.prototype = new Parent();
+
+    Child.prototype.getChildProperty = function () {
+        return this.childProperty;
+    };
+
+    var child = new Child();
+    console.log(child.getParentProperty()); // true
+    console.log(child.getChildProperty()); // false
+</script>
+
+</html>

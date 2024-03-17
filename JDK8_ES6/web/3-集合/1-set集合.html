@@ -1,12 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-<script>
 
-</script>
+<body>
+    <script>
+        // let list = ["小王", "小李", "小马"]
+        // let set = new Set(list)
+        // console.log(set.size)
+        // for (let name of set) {
+        //     console.log(name)
+        // }
+        // set.add(1)
+        // console.log(set)
+        // console.log(set.has(1))
+
+        //数组去重的几种方式
+        let arr1 = [1, 1, 2, 3, 7, 4, 5]
+        let a1 = new Set([...arr1])
+
+        a1.delete(1)
+        console.log(a1)
+        a1.clear()
+        console.log(a1)
+        // let arr2 = [2, 2, 3, 4, 5, 6]
+        // // let a1 = [...new Set([...arr1, ...arr2])]
+        // // a1.sort((a, b) => a - b)
+        // // console.log(a1)
+
+        // //求交集 对数组1进行过滤，筛选数组2中含有数组1的元素
+        // console.log([...new Set(arr1)].filter(item => new Set(arr2).has(item)))
+
+        // //求并集
+        // console.log([...new Set([...arr1, ...arr2])])
+
+
+
+
+    </script>
 </body>
+
 </html>
