@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ES6 模块化</title>
 </head>
+
 <body>
 
 </body>
+<script type="module">
+    import { name, eat } from "./js/m1.js"
+    import { name as myname, hello } from "./js/m2.js"
+    console.log(name)
+    console.log(eat())
+
+
+    console.log(myname)
+</script>
+
 </html>

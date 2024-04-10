@@ -1,6 +1,19 @@
-//1. 引入 fs 模块
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs')
+let filePath = "./file/为学1.md"
 
-console.log(__dirname);
-const filepath = path.join(__dirname,"为学.md");
+
+new Promise((resolve, reject) => {
+    fs.readFile(filePath, (err, data) => {
+        if (err) {
+            reject(err)
+        }
+        else {
+            resolve(data)
+        }
+    });
+}).then(val => {
+    console.log(val)
+    console.log(val.toString());
+}, res => {
+    console.log(res)
+})
