@@ -1,10 +1,12 @@
 //1-默认导出-最常用
 export default {
-    id:1,
-    getUsers(){
+    id: 1,
+    getUsers() {
         console.log("获得用户数据");
-    }
+    },
+    name: "ma"
 }
+
 
 //2-分别导出
 // export let id = 1;
